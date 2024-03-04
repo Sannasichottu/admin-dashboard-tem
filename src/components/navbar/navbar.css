@@ -54,12 +54,12 @@
 
 @media only screen and (max-width:978px) {
     .nav_icon {
-        display: none;
+        display: inline;
     }
 }
 
 @media only screen and (max-width:480px) {
-    .navbar__left {
+    .navbar_left {
         display: none;
     }
 }

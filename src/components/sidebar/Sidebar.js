@@ -1,22 +1,22 @@
 import React from 'react'
 import './sidebar.css'
-import logo from '../../assets/logo0.avif'
+import logo from '../../assets/logo.png'
 import { ImCross } from "react-icons/im";
 
 import { FaBriefcase, FaBuilding, FaCalendarAlt, FaFileSignature, FaHandshake, FaMoneyBill, FaPowerOff, FaQuestion, FaSignOutAlt, FaUserFriends, FaUserSecret, FaWarehouse } from 'react-icons/fa';
-const Sidebar = ({SidebarOpen, closeSidebar}) => {
+const Sidebar = ({sidebarOpen, closeSidebar}) => {
   return (
-    <div className={SidebarOpen ? 'sidebar-responsive' : ''} id='sidebar'>
+    <div className={sidebarOpen ? 'sidebar-responsive' : ''} id='sidebar'>
         <div className='sidebar_title'>
             <div className='sidebar_img'>
                 <img src={logo} alt='logo' />
                 <h1>Codersbite</h1>
             </div>
-            <ImCross className='i' id='sidebarIcon' onClick={()=>closeSidebar()} />
+            <ImCross onClick={()=>closeSidebar()} className='i' id='sidebarIcon' aria-hidden="true" />
         </div>
         <div className='sidebar_menu'>
             <div className='sidebar_link active_menu_link' >
-            <FaUserSecret className='i' />
+            <FaUserSecret className='i' aria-hidden="true"/>
                 <a href=' ' className='a'>Admin Management</a>
             </div>
             <div className='sidebar_link'>
